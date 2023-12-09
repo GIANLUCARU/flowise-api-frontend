@@ -20,11 +20,11 @@ export const createPrediction = async (req, res) => {
         body: JSON.stringify(flowiseData),
       }
     );
-    
+
     const data = await response.json();
     console.log(data);  
-
-    res.status(200).json({ message: JSON.stringify(data) });
+    
+    res.status(200).json({ message: "Demo Response" });
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: error.message });
